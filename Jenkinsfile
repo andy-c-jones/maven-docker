@@ -5,7 +5,7 @@ podTemplate(label: label,
         stage('build docker image') {
             container('docker') {
                 stage('build') {
-                    docker build .
+                    sh 'docker build .'
                 }
             }
         }
