@@ -1,6 +1,6 @@
 FROM maven:3.3.9-jdk-8-alpine
 
-RUN apk --update add openrc docker
+RUN apk add openrc --no-cache
+RUN apk --update add docker
 
-RUN rc-update add docker
 
