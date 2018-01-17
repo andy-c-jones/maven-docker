@@ -3,6 +3,7 @@ podTemplate(label: 'label',
         volumes: [hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')]) {
     node('label') {
         stage('build docker image') {
+            git 'https://github.com/andy-c-jones/maven-docker.git'
             container('docker') {
                 stage('build') {
                     sh 'docker build .'
